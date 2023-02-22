@@ -1,6 +1,5 @@
 fn main() {
-    println!("Hello, world!");
-    // cooment
+    order_weight("  101 35 67 2 09");
 }
 
 fn order_weight(s: &str) -> String {
