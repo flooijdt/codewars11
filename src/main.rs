@@ -4,10 +4,10 @@ fn main() {
 
 fn order_weight(s: &str) -> String {
     // your code
-    let mut vecko: Vec<Vec<u32>> = Vec::new();
+    let mut vecko: Vec<Vec<char>> = Vec::new();
     let mut strr: Vec<&str> = s.split_whitespace().collect();
     for i in strr.iter_mut() {
-        let mut vecky: Vec<u32> = i.chars().to_digit(10).collect();
+        let mut vecky: Vec<char> = i.chars().collect();
         vecko.push(vecky);
     }
     println!("{:?}", vecko);
