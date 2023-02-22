@@ -12,13 +12,13 @@ fn order_weight(s: &str) -> String {
         let mut vecky: Vec<char> = i.chars().collect();
         vecko.push(vecky);
     }
-    // for v in vecko.iter_mut() {
+    for v in vecko.iter_mut() {
+        veckb = v.into();
     //     for c in v {
     //         veckb.push(c.to_digit(10).unwrap());
     //     }
     //     vecka.push(veckb.clone());
-    // }
-    vecka = vecko.into();
+    // };
     println!("{:?}", vecka);
     "String".to_string()
 }
