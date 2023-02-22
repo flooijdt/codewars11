@@ -5,7 +5,9 @@ fn main() {
 fn order_weight(s: &str) -> String {
     // your code
     let mut strr: Vec<&str> = s.split_whitespace().collect();
-    for i in
+    for i in strr.iter_mut() {
+        i.chars();
+    }
     println!("{:?}", strr);
     "String".to_string()
 }
