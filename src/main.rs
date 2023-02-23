@@ -28,9 +28,11 @@ fn order_weight(s: &str) -> String {
     }
 
     let mut counter = 0;
+    let mut dif = 0;
     for v in vecka.clone().iter_mut() {
         if v.is_empty() {
-            vecka.remove(counter);
+            vecka.remove(counter - dif);
+            dif += 1;
         }
         counter += 1;
     }
