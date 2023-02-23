@@ -23,8 +23,6 @@ fn order_weight(s: &str) -> String {
         } else {
             continue;
         }
-        // vecka.push(ve.clone());
-        //     vecka.push(veckb.clone());
     }
 
     let mut counter = 0;
