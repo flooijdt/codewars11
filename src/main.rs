@@ -7,10 +7,12 @@ fn order_weight(s: &str) -> String {
     let mut vecko: Vec<Vec<char>> = Vec::new();
     let mut vecka: Vec<Vec<u32>> = Vec::new();
     let mut strr: Vec<&str> = s.split_whitespace().collect();
+
     for i in strr.iter_mut() {
         let vecky: Vec<char> = i.chars().collect();
         vecko.push(vecky);
     }
+
     for v in vecko.iter_mut() {
         let mut ve: Vec<u32> = Vec::new();
         vecka.push(ve.clone());
@@ -26,6 +28,7 @@ fn order_weight(s: &str) -> String {
 
     let mut counter = 0;
     let mut dif = 0;
+
     for v in vecka.clone().iter_mut() {
         if v.is_empty() {
             vecka.remove(counter - dif);
