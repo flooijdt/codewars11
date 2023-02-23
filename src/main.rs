@@ -3,7 +3,6 @@ fn main() {
 }
 
 fn order_weight(s: &str) -> String {
-    // your code
     let mut vecko: Vec<Vec<char>> = Vec::new();
     let mut vecka: Vec<Vec<u32>> = Vec::new();
     let mut strr: Vec<&str> = s.split_whitespace().collect();
