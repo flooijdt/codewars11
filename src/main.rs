@@ -44,7 +44,7 @@ fn order_weight(s: &str) -> String {
         if sum >= biggest {
             vecka_ordered.push(v.to_vec());
             biggest = v.clone().iter().sum();
-        };
+        }
     }
 
     println!("{:?}", &vecka);
