@@ -28,7 +28,7 @@ fn order_weight(s: &str) -> String {
     }
 
     let mut counter = 0;
-    for v in vecka.iter_mut() {
+    for v in vecka.clone().iter_mut() {
         if v.is_empty() {
             vecka.remove(counter);
         }
