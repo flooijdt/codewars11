@@ -14,13 +14,26 @@ fn order_weight(s: &str) -> String {
     }
     for v in vecko.iter_mut() {
         let mut ve: Vec<u32> = Vec::new();
-        vecka.push(ve);
+        vecka.push(ve.clone());
         for c in v {
-            c.to_digit(10);
-            ve.clone().push(c.to_digit(10).unwrap());
+            ve.push(c.to_digit(10).unwrap());
         }
+        if !ve.is_empty() {
+            vecka.push(ve.clone());
+        } else {
+            continue;
+        }
+        // vecka.push(ve.clone());
         //     vecka.push(veckb.clone());
     }
-    println!("{:?}", vecka);
+
+    let mut counter = 0;
+    for v in vecka.iter_mut() {
+        if v.is_empty() {
+            vecka.remove(counter);
+        }
+        counter += 1;
+    }
+    println!("{:?}", &vecka);
     "String".to_string()
 }
