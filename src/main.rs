@@ -13,9 +13,11 @@ fn order_weight(s: &str) -> String {
         vecko.push(vecky);
     }
     for v in vecko.iter_mut() {
-        for c in v.into() {
+        let mut ve: Vec<u32> = Vec::new();
+        vecka.push(ve);
+        for c in v {
             c.to_digit(10);
-            //         veckb.push(c.to_digit(10).unwrap());
+            ve.clone().push(c.to_digit(10).unwrap());
         }
         //     vecka.push(veckb.clone());
     }
