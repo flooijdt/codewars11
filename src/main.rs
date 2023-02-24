@@ -53,9 +53,9 @@ fn order_weight(s: &str) -> String {
 
     let mut hashy: HashMap<Vec<u32>, u32> = HashMap::new();
 
-    for v in vecka_sum.iter().enumerate() {
-        for i in vecka.iter().enumerate() {
-            hashy.insert(i.1.clone(), v.1.clone());
+    for v in vecka_sum.iter() {
+        for i in vecka.iter() {
+            hashy.insert(i.clone(), v.clone());
         }
     }
 
