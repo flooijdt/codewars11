@@ -38,16 +38,18 @@ fn order_weight(s: &str) -> String {
 
     let mut biggest: u32 = 0;
     let mut vecka_ordered: Vec<Vec<u32>> = Vec::new();
+    let mut vecka_sum: Vec<u32> = Vec::new();
 
     for v in vecka.iter() {
         let sum: u32 = v.iter().sum();
-        if sum >= biggest {
-            vecka_ordered.push(v.to_vec());
-            biggest = v.clone().iter().sum();
-        }
+        vecka_sum.push(sum);
+        // if sum >= biggest {
+        //     vecka_ordered.push(v.to_vec());
+        //     biggest = v.clone().iter().sum();
+        // }
     }
 
     println!("{:?}", &vecka);
-    println!("{:?}", &vecka_ordered);
+    println!("{:?}", &vecka_sum);
     "String".to_string()
 }
