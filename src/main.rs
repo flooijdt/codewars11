@@ -1,3 +1,5 @@
+use std::collections::HashMap;
+
 fn main() {
     order_weight("  101 35 67 2 09");
 }
@@ -49,7 +51,15 @@ fn order_weight(s: &str) -> String {
         // }
     }
 
-    println!("{:?}", &vecka);
+    let mut hashy: HashMap<Vec<u32>, u32> = HashMap::new();
+
+    for v in vecka_sum.iter().enumerate() {
+        for i in vecka.iter().enumerate() {
+            hashy.insert(i.1.clone(), v.1.clone());
+        }
+    }
+
+    println!("{:?}", &hashy);
     println!("{:?}", &vecka_sum);
     "String".to_string()
 }
