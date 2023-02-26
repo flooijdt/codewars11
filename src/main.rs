@@ -62,7 +62,10 @@ fn order_weight(s: &str) -> String {
         counter += 1;
     }
 
+    let mut zipped = vecka.iter().zip(vecka_sum.iter());
+
     println!("{:?}", &hashy);
     println!("{:?}", &vecka_sum);
+    println!("{:?}", &zipped);
     "String".to_string()
 }
