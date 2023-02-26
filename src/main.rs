@@ -38,6 +38,8 @@ fn order_weight(s: &str) -> String {
         counter += 1;
     }
 
+    println!("{:?}", &vecka.sort());
+
     let mut biggest: u32 = 0;
     let mut vecka_ordered: Vec<Vec<u32>> = Vec::new();
     let mut vecka_sum: Vec<u32> = Vec::new();
@@ -64,7 +66,7 @@ fn order_weight(s: &str) -> String {
 
     // let mut bloom: Vec<u32> = *vecka.clone().iter().collect_into();
 
-    let mut zipped: Vec<Vec<u32>> = vecka.clone();
+    // let mut zipped: Vec<Vec<u32>> = vecka.sort_by_key(|v| v);
     // .iter()
     // .enumerate()
     // .zip(vecka_sum.iter())
@@ -73,7 +75,7 @@ fn order_weight(s: &str) -> String {
     // let coll = zipped.sort();
 
     // println!("{:?}", &hashy);
-    println!("{:?}", &zipped.sort());
+    // println!("{:?}", &zipped.sort());
     // println!("{:?}", &zipped);
     "String".to_string()
 }
