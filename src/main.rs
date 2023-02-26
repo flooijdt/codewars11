@@ -64,7 +64,7 @@ fn order_weight(s: &str) -> String {
 
     // let mut bloom: Vec<u32> = *vecka.clone().iter().collect_into();
 
-    // let mut zipped: Vec<&Vec<u32>> = vecka.sort();
+    let mut zipped = vecka.clone().sort();
     // .iter()
     // .enumerate()
     // .zip(vecka_sum.iter())
@@ -73,7 +73,7 @@ fn order_weight(s: &str) -> String {
     // let coll = zipped.sort();
 
     // println!("{:?}", &hashy);
-    println!("{:?}", &vecka.sort());
+    println!("{:?}", &zipped);
     // println!("{:?}", &zipped);
     "String".to_string()
 }
