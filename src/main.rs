@@ -62,15 +62,18 @@ fn order_weight(s: &str) -> String {
         counter += 1;
     }
 
-    let mut bloom: Vec<u32> = *vecka.clone().iter().collect();
+    // let mut bloom: Vec<u32> = *vecka.clone().iter().collect_into();
 
-    let mut zipped: HashMap<(usize, &Vec<u32>), &u32> =
-        vecka.iter().enumerate().zip(vecka_sum.iter()).collect();
+    // let mut zipped: HashMap<&Vec<u32>, &u32> = vecka
+    // .iter()
+    // .enumerate()
+    // .zip(vecka_sum.iter())
+    // .collect::<HashMap<&Vec<u32>, &u32>>();
 
     // let coll = zipped.sort();
 
-    println!("{:?}", &hashy);
-    println!("{:?}", &vecka_sum);
-    println!("{:?}", &zipped);
+    // println!("{:?}", &hashy);
+    println!("{:?}", &vecka);
+    // println!("{:?}", &zipped);
     "String".to_string()
 }
