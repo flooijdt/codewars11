@@ -62,7 +62,7 @@ fn order_weight(s: &str) -> String {
         counter += 1;
     }
 
-    let mut zipped = vecka.iter().zip(vecka_sum.iter());
+    let mut zipped: HashMap<&Vec<u32>, &u32> = vecka.iter().zip(vecka_sum.iter()).collect();
 
     println!("{:?}", &hashy);
     println!("{:?}", &vecka_sum);
