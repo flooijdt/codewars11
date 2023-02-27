@@ -38,7 +38,7 @@ fn order_weight(s: &str) -> String {
         counter += 1;
     }
 
-    println!("{:?}", &vecka.sort());
+    println!("{:?}", &strr.sort());
 
     let mut biggest: u32 = 0;
     let mut vecka_ordered: Vec<Vec<u32>> = Vec::new();
