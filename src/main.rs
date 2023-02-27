@@ -1,7 +1,7 @@
 // use std::collections::HashMap;
 
 fn main() {
-    order_weight("  101 35 67 2 09");
+    println!("{:?}", &order_weight("  101 35 67 2 09"));
 }
 
 // fn order_weight(s: &str) -> String {
