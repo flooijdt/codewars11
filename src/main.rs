@@ -1,85 +1,29 @@
-// use std::collections::HashMap;
+// My friend John and I are members of the "Fat to Fit Club (FFC)". John is worried because each month a list with the weights of members is published and each month he is the last on the list which means he is the heaviest.
+
+// I am the one who establishes the list so I told him: "Don't worry any more, I will modify the order of the list". It was decided to attribute a "weight" to numbers. The weight of a number will be from now on the sum of its digits.
+
+// For example 99 will have "weight" 18, 100 will have "weight" 1 so in the list 100 will come before 99.
+
+// Given a string with the weights of FFC members in normal order can you give this string ordered by "weights" of these numbers?
+// Example:
+
+// "56 65 74 100 99 68 86 180 90" ordered by numbers weights becomes:
+
+// "100 180 90 56 65 74 68 86 99"
+
+// When two numbers have the same "weight", let us class them as if they were strings (alphabetical ordering) and not numbers:
+
+// 180 is before 90 since, having the same "weight" (9), it comes before as a string.
+
+// All numbers in the list are positive numbers and the list can be empty.
+// Notes
+
+//     it may happen that the input string have leading, trailing whitespaces and more than a unique whitespace between two consecutive numbers
 
 fn main() {
     println!("{:?}", &order_weight("  101 35 67 2 09"));
 }
 
-// fn order_weight(s: &str) -> String {
-//     let mut vecko: Vec<Vec<char>> = Vec::new();
-//     let mut vecka: Vec<Vec<u32>> = Vec::new();
-//     let mut strr: Vec<&str> = s.split_whitespace().collect();
-
-//     strr.sort();
-//     println!("{:?}", &strr);
-
-//     for i in strr.iter_mut() {
-//         let vecky: Vec<char> = i.chars().collect();
-//         vecko.push(vecky);
-//     }
-
-//     for v in vecko.iter_mut() {
-//         let mut ve: Vec<u32> = Vec::new();
-//         vecka.push(ve.clone());
-//         for c in v {
-//             ve.push(c.to_digit(10).unwrap());
-//         }
-//         if !ve.is_empty() {
-//             vecka.push(ve.clone());
-//         } else {
-//             continue;
-//         }
-//     }
-
-//     let mut counter = 0;
-//     let mut dif = 0;
-
-//     for v in vecka.clone().iter_mut() {
-//         if v.is_empty() {
-//             vecka.remove(counter - dif);
-//             dif += 1;
-//         }
-//         counter += 1;
-//     }
-
-//     let mut biggest: u32 = 0;
-//     let mut vecka_ordered: Vec<Vec<u32>> = Vec::new();
-//     let mut vecka_sum: Vec<u32> = Vec::new();
-
-//     for v in vecka.iter() {
-//         let sum: u32 = v.iter().sum();
-//         vecka_sum.push(sum);
-//         // if sum >= biggest {
-//         //     vecka_ordered.push(v.to_vec());
-//         //     biggest = v.clone().iter().sum();
-//         // }
-//     }
-
-//     let mut hashy: HashMap<Vec<u32>, u32> = HashMap::new();
-
-//     let mut counter = 0;
-
-//     for v in vecka_sum.iter() {
-//         for i in vecka.iter() {
-//             hashy.insert(i.clone(), vecka_sum[counter]);
-//         }
-//         counter += 1;
-//     }
-
-//     // let mut bloom: Vec<u32> = *vecka.clone().iter().collect_into();
-
-//     // let mut zipped: Vec<Vec<u32>> = vecka.sort_by_key(|v| v);
-//     // .iter()
-//     // .enumerate()
-//     // .zip(vecka_sum.iter())
-//     // .collect::<Vec<&Vec<u32>>>();
-
-//     // let coll = zipped.sort();
-
-//     // println!("{:?}", &hashy);
-//     // println!("{:?}", &zipped.sort());
-//     // println!("{:?}", &zipped);
-//     "String".to_string()
-// }
 fn order_weight(s: &str) -> String {
     let mut numbers = s.split_whitespace().collect::<Vec<_>>();
     numbers.sort();
